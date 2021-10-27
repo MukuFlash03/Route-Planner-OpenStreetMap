@@ -1,8 +1,23 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This project was implemented as a part of Udacity's C++ Nanodegree Program.
+
+By using real map data from the OpenStreeMap project, the project aims at: 
+* Creating a route planner that plots a path between two points on a map.
+* Additionally, the A* search is studied and implemented in C++ to find a path between two points.
 
 <img src="map.png" width="600" height="450" />
+
+## Project Overview
+* The map data from OpenStreetMap file (.OSM XML file) is parsed.
+* The user inputs two map coordinates - initial and final coordinates.
+* Next, Route_Planner.cpp is executed for evaluating the final path.
+* The closest initial and final nodes are found as per the input coordinates.
+* Valid neighbors for each Node are added to the open nodes list.
+* Based on a heuristic value(h) and the distance from the start node(g), next node is popped.
+* The open list is updated again.
+* The process is repeated till either the next node is the final destination, or the open list is exhausted.
+* The optimal path is returned and plotted used IO2D library.
 
 ## Cloning
 
